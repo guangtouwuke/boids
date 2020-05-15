@@ -24,4 +24,11 @@ class FLOCKING_API AFlockingGameModeBase : public AGameModeBase
 
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
+
+	FTimerHandle CountDownTimer;
+	void CountDown();
+	int time = 30;
+	public:
+	UFlockingManager* getManager();
+	//void des();
 };
